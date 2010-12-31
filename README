@@ -1,0 +1,62 @@
+mozplugger
+------------------------------------------
+The goal of the project is to provide a minimalist, clean and stable 
+general purpose Mozilla plugin module that allows the user to embed and 
+launch their favourite application to handle the various different types 
+of media found on the Internet.
+
+Runtime requirements:
+  cygwin-1.5.25-11
+  libX11_6-1.1.3-1
+  m4
+
+Build requirements:
+(besides corresponding -devel packages)
+  binutils-20060817-1
+  cygport-0.3.11-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+
+Canonical website:
+  http://mozplugger.mozdev.org/
+
+Canonical download:
+  http://mozplugger.mozdev.org/files/
+
+-------------------------------------------
+
+Build instructions:
+  unpack mozplugger-1.10.2-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./mozplugger-1.10.2-X.cygport all
+
+This will create:
+  /usr/src/mozplugger-1.10.2-X-src.tar.bz2
+  /usr/src/mozplugger-1.10.2-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/defaults/etc/mozpluggerrc
+  /etc/postinstall/mozplugger.sh
+  /usr/bin/mozplugger-controller.exe
+  /usr/bin/mozplugger-helper.exe
+  /usr/lib/mozilla/plugins/cygmozplugger.dll
+  /usr/share/doc/mozplugger-1.10.2/COPYING
+  /usr/share/doc/mozplugger-1.10.2/ChangeLog
+  /usr/share/doc/mozplugger-1.10.2/README
+  /usr/share/man/man7/mozplugger.7.gz
+
+------------------
+
+Port Notes:
+
+----- version 1.10.2-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/

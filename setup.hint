@@ -1,0 +1,7 @@
+category: Web
+requires: libX11_6 m4
+sdesc: "Mozilla plugin for launching external programs"
+ldesc: "The goal of the project is to provide a minimalist, clean and 
+stable general purpose Mozilla plugin module that allows the user to 
+embed and launch their favourite application to handle the various 
+different types of media found on the Internet."

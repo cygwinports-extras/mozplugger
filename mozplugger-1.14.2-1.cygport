@@ -1,0 +1,16 @@
+DESCRIPTION="Mozilla plugin for launching external programs"
+HOMEPAGE="http://mozplugger.mozdev.org/"
+SRC_URI="http://mozplugger.mozdev.org/files/${P}.tar.gz"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake all CC=${CC} LD=${CC} XCFLAGS="${CFLAGS} -DPIC" XLDFLAGS="${LDFLAGS} -shared" EXTRA_LIBS="-lX11"
+}
+
+src_install() {
+	cd ${B}
+	cyginstall root=${D}
+	mv ${D}/usr/lib/mozilla/plugins/mozplugger.{so,dll}
+	make_etc_defaults /etc/mozpluggerrc
+}
